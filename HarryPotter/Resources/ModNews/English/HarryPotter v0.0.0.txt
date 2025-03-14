@@ -1,0 +1,24 @@
+﻿#Number:100001
+#Title:HarryPotterEdited contributor
+#SubTitle:★★★★Thankyou★★★★
+#ShortTitle:★HPEcontributor
+#Date:2025-03-15T00:00:00Z
+#-----------------------------
+
+##You know what
+- No suitable English language translation was found for this update, and the English content is mostly machine translated
+- Currently, due to unknown errors, it may not be possible to view update announcements properly
+
+##HarryPotterEdited
+HarryPotterEdited by TXT team
+
+##HarryPotter
+HarryPotter by FangKuaiYa
+Art by 賣蟑螂NotKomi & PhasmoFireGod
+
+##Other Credits & Resources:
+Reactor - The framework used for all versions
+BepInEx - Used to hook game functions
+TownOfUs-R - Custom game options by eDonnes124
+TheOtherRoles - Harry Potter Hats is based on the code from TheOtherRoles
+TONX - borrowed the code from the update announcement

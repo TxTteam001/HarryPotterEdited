@@ -1,0 +1,34 @@
+﻿using HarryPotter.Classes.WorldItems;
+using Hazel;
+using UnityEngine;
+
+namespace HarryPotter.Classes.Items
+{
+    public class PortKey : Item
+    {
+        public PortKey(ModdedPlayerClass owner)
+        {
+            this.Owner = owner;
+            this.ParentInventory = owner.Inventory;
+            this.Id = 2;
+            this.Icon = Main.Instance.Assets.ItemIcons[Id];
+            this.Name = "Port Key";
+            this.Tooltip = ModTranslation.getString("\n\n\n" + "\n\n\n" + "PortKeyTooltip");
+        }
+
+        public override void Use()
+        {
+            if (AmongUsClient.Instance.AmHost)
+                PortKeyWorld.HasSpawned = false;
+            else
+            {
+                MessageWriter writer = AmongUsClient.Instance.StartRpc(PlayerControl.LocalPlayer.NetId, (byte)Packets.UseItem, SendOption.Reliable);
+                writer.Write(Id);
+                writer.EndMessage();
+            }
+            this.Delete();
+            
+            Main.Instance.RpcTeleportPlayer(Owner._Object, GameOptionsManager.Instance.currentNormalGameOptions.MapId == 4 ? new Vector2(7.620923f, 15.0479f) : ShipStatus.Instance.MeetingSpawnCenter);
+        }
+    }
+}

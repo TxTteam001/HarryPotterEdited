@@ -1,0 +1,24 @@
+﻿#Number:100002
+#Title:HarryPotterEdited v25.3.15
+#SubTitle:★★★★HarryPotterEdited★★★★
+#ShortTitle:★HPE v25.3.15--
+#Date:2025-03-15T00:00:00Z
+#-----------------------------
+
+##You know what
+- No suitable English language translation was found for this update, and the English content is mostly machine translated
+
+## Base
+- Base on AmongUs v2024.11.26
+- Base on HarryPotter v2.0.0
+
+## Warning
+-If you enter the game in another language and switch to another language,the settings may not change properly. Please analyze!!!
+-At present, we are unable to accurately identify the source of this issue
+
+## Fix
+-The original contributor list has many bugs and has been merged into the mod announcement
+-Fixed the issue in Harry Potter v2.0.0 where the right mouse button could not display skill/item introductions properly
+
+## Deletion
+-In HarryPotter v2.0.0, the function that adjusting module settings will be displayed synchronously at the lower left corner is deleted. At present, this change is not permanent

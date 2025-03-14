@@ -1,0 +1,26 @@
+﻿#Number:100001
+#Title:HarryPotterEdited 贡献者名单
+#SubTitle:★★★★感谢你们★★★★
+#ShortTitle:★HPE贡献者名单
+#Date:2025-03-15T00:00:00Z
+#-----------------------------
+
+##您需要知道的
+- 目前因为未知错误导致可能无法正常查看更新公告
+
+##主要开发者
+- TXTteam 
+
+##简体中文翻译
+- TXTteam
+
+##原模组开发者
+HarryPotter - 由 FangKuaiYa 续写
+艺术设计 - 賣蟑螂NotKomi & PhasmoFireGod
+
+##其他资源和贡献者:
+Reactor - 所有版本使用的框架
+BepInEx - 用于挂钩游戏函数
+TownOfUs-R - 游戏设置部分代码来自 eDonnes124
+TheOtherRoles - 哈利波特帽代码来自TheOtherHats
+TONX - 借鉴了模组公告的代码

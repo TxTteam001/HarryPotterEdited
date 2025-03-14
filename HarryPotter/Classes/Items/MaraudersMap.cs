@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
+using Discord;
+using HarryPotter.Classes.WorldItems;
+using Hazel;
+using UnityEngine;
+using InnerNet;
+using Reactor.Utilities;
+
+namespace HarryPotter.Classes.Items
+{
+    public class MaraudersMap : Item
+    {
+        public MaraudersMap(ModdedPlayerClass owner)
+        {
+            this.Owner = owner;
+            this.ParentInventory = owner.Inventory;
+            this.Id = 1;
+            this.Icon = Main.Instance.Assets.ItemIcons[Id];
+            this.Name = "Marauder's Map";
+            this.Tooltip = string.Format(ModTranslation.getString("\n\n\n" + "\n\n\n" +"\n\n\n"+"MaraudersMapTooltip"), Main.Instance.Config.MapDuration);
+        }
+        public override void Use()
+        {
+            this.Delete();
+            Coroutines.Start(ZoomOut());
+        }
+
+        public IEnumerator ZoomOut()
+        {
+            DateTime now = DateTime.UtcNow;
+            Camera.main.orthographicSize *= 4f;
+            
+            bool oldActive = HudManager.Instance.ShadowQuad.gameObject.active;
+            bool oldActiveKill = HudManager.Instance.KillButton.gameObject.active;
+            bool oldActiveUse = HudManager.Instance.UseButton.gameObject.active;
+            bool oldActiveReport = HudManager.Instance.ReportButton.gameObject.active;
+            bool oldUseConsoles = Owner.CanUseConsoles;
+            HudManager.Instance.ShadowQuad.gameObject.SetActive(false);
+            HudManager.Instance.KillButton.gameObject.SetActive(false);
+            HudManager.Instance.UseButton.gameObject.SetActive(false);
+            HudManager.Instance.ReportButton.gameObject.SetActive(false);
+            Owner.CanUseConsoles = false;
+
+            while (true)
+            {
+                if (Minigame.Instance)
+                    Minigame.Instance.Close();
+                
+                if ((now.AddSeconds(Main.Instance.Config.MapDuration) - DateTime.UtcNow).TotalMilliseconds < 0)
+                    break;
+
+                if (MeetingHud.Instance)
+                {
+                    oldActiveKill = false;
+                    oldActiveReport = false;
+                    oldActiveUse = false;
+                    break;
+                }
+
+                if (AmongUsClient.Instance.GameState != InnerNetClient.GameStates.Started)
+                    break;
+
+                yield return null;
+            }
+
+            Camera.main.orthographicSize /= 4f;
+            
+            HudManager.Instance.ShadowQuad.gameObject.SetActive(oldActive);
+            HudManager.Instance.KillButton.gameObject.SetActive(oldActiveKill);
+            HudManager.Instance.UseButton.gameObject.SetActive(oldActiveUse);
+            HudManager.Instance.ReportButton.gameObject.SetActive(oldActiveReport);
+            Owner.CanUseConsoles = oldUseConsoles;
+
+            yield break;
+        }
+    }
+}
