@@ -1,74 +1,39 @@
-# Harry Potter Mod
-A theme-based Among Us mod that adds items and roles related to the Harry Potter movies/books.
+# Harry Potter Esited Mod
 
-https://www.youtube.com/watch?v=b22hzt0sPhE&lc=UgwfTwSKfYn_ASfQxL14AaABAg
+一个由TXT团队所编写的项目，参与这个项目的人数并不多，
 
-# Installation Instructions (Launcher)
-This mod comes packaged with an easy to use launcher. NOTE: The launcher sometimes gets flagged as a virus/unsafe. If you have any problems with the Launcher or concerns with it's safety, you can install the mod tradationally. (see below)
+事实上这个项目其实是被我当作正式制作模组的尝试，
 
-- Verify you have installed the [C++ Redist](https://aka.ms/vs/16/release/vc_redist.x86.exe).
-- Click on the tab labeled "Releases" on the right of this page.
-- Download the "HPLauncher.exe" from "Assets" section.
-- Once it is downloaded, launch the exe file.
-- Click on the "Install" button and wait for the mod to finish installing.
-- Once it is installed, press the "Play" button.
-- Once the game is open, start a local game and check for the watermark at the right of the screen.
-- The mod is installed. Hooray!
+所以如果他哪天突然消失了也是再正常不过的事。
 
-# Installation Instructions (Traditional)
-For a video installation tutorial, go [here](https://www.youtube.com/watch?v=MN-prLtBrcQ).
+This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
 
-- Verify you have installed the [C++ Redist](https://aka.ms/vs/16/release/vc_redist.x86.exe).
-- Click on the tab labeled "Releases" on the right of this page.
-- Click on the zip file inside the latest release window (either "latest.zip", or "HPMod.zip").
-- Once it is downloaded, open the zip file.
-- Open steam, right click on Among Us, hover over "Manage", and then press "Browse Local Files".
-- If you see a folder called "BepInEx", delete it before installing the mod. This is to verify you don't accidentally install multiple incompatible mods. 
-- Drag all the files inside the downloaded zip file into your Among Us folder (if it prompts you to replace any files, do it).
-- Open the game and wait; the first start may take a few minutes.
-- Once the game is open, start a local game and check for the watermark at the right of the screen.
-- The mod is installed. Hooray!
+(本mod不隶属于Among Us或Innerloth LLC，其中包含的内容也不由Innerloth LLC认可或以其他方式赞助。本文包含的部分材料是Innerroth LLC的财产。© Innersloth LLC。)
 
-# Roles
+# 模组的更新与迭代
 
-Role  | Passive Ability  |  Active Ability  |  Active Ability #2
-------------- | ------------- | ------------- | -------------
-Harry  |  Can not be killed by Voldemort's spell.  |  Can become invisible for 10 seconds.  | None.
-Hermione  | None.  |  Can teleport themselves back to where they were 10 seconds ago. This can bring the player back to life, unless they are killed by Voldemort's spell.  |  None.
-Ron  |  None.  | Can activate an ability that prevents any spells or kills being used against the player.  |  None.
-Voldemort  |  None.  |  Can shoot a spell that will kill any player it connects with, except Harry; it will kill Voldemort instead.  |  None.
-Bellatrix  |  None.  |  Can shoot a spell that temporarily blinds and freezes any player it connects with.  |  Can mind-control any player they choose and kill someone as that player. (shares a cooldown with the kill button)
+此模组基于方块的"[HarryPotter](https://github.com/FangkuaiYa/HarryPotterAmongUs-R)"，本家更新均会同步。
 
-# Items
+方块的"[HarryPotter](https://github.com/FangkuaiYa/HarryPotterAmongUs-R)"基于FatherofHeathens的"[HarryPotter](https://github.com/FatherofHeathens/HarryPotterAmongUs)"。
 
-Item  | Explanation
-------------- | -------------
-Deluminator  |  Toggles the status of the lights.
-Port Key  | Teleports the user to the emergency meeting button.
-Marauder’s Map  |  Zooms out the player's vision so they can see almost the entire map.
-The Golden Snitch  |  Can be used during meetings to force all the votes onto a single player.
-Resurrection Stone  |  Allows the holder to see ghosts.
-Elder Wand  |  If the holder is a crewmate, it grants them a one-time kill button, and if they're an Impostor, it refreshes all their cooldowns.
-Sorting Hat  |  Target a player during the meeting phase to reveal their role to the entire lobby.
-Philosopher Stone  |  Revives the holder if they are killed or voted off.
-Butter Beer (Trap Item)  |  For 10 seconds the user’s controls are reversed and their speed is increased (immediately used on pick-up).
-Basilisk (Trap Item)  |  Stuns the player who touches the item and lowers their vision until the next meeting is called (immediately used on pick-up).
+# 职业
 
-# Game Options
+职业名称|技能01|技能02|
+--------|------|-------|
+哈利|使用隐身斗篷隐身。|无|
+赫敏|使用时间转化器倒退自己的时间，如果被非咒语所击杀会复活。|无|
+罗恩|使用防御式决斗来防止自己被击杀，使用期间无法移动。|无|
+伏地魔|使用阿瓦达索命咒进行击杀。|无|
+贝拉|使用夺魂咒控制他人。|使用钻心刻骨咒使玩家失明并动弹不得。| 
 
-Game Setting  | Explanation
-------------- | -------------
-Defensive Duelist Cooldown  |  Changes the cooldown of Ron's active ability.
-Invisibility Cloak Cooldown  |  Changes the cooldown of Harry's active ability.
-Time Turner Cooldown  |  Changes the cooldown of Hermione's active ability.
-Crucio Cooldown  |  Changes the cooldown of Bellatrix's spell.
-Order of the Impostors  | If toggled, the Impostors can win by eliminating Harry, Hermione, and Ron.
-Can Spells be Used in Vents  | If toggled, spells can be casted while the caster is inside a vent.
-Show Info Popups/Tooltips  |  When 'On', informational popups/tooltips will be shown.
-Shared Voldemort Cooldowns  |  When 'On', the Kill button and the Curse button will share a cooldown.
+# 道具
 
-# Bugs or feature suggestions
-For general help with issues, feature suggestions, or bugs, join the [Discord Server](https://discord.gg/chGrxw8mJk).
+道具名称|功能|
+---------|------------|
+熄灯器|能够破坏灯光(除Fungle地图)。|
+老魔杖|如果你是内鬼，你可以通过它重置你的冷却时间。反之则会获得一次杀死任何人的机会。|
+活点地图|扩大你的视野。|
+罗恩|使用防御式决斗来防止自己被击杀，使用期间无法移动。|
+伏地魔|使用阿瓦达索命咒进行击杀。|
+贝拉|使用夺魂咒控制他人。|
 
-# License
-This software is distributed under the <a href="./LICENSE">`GNU GPLv3 License`</a>.
